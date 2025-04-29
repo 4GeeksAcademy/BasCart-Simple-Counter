@@ -1,26 +1,28 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
+let counter = 0
+
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+	
+	
+	counter ++
+	const six	= Math.floor(counter / 100000) % 10
+	const five  = Math.floor(counter / 10000) % 10
+  	const four  = Math.floor(counter / 1000) % 10
+  	const three = Math.floor(counter / 100) % 10
+  	const two   = Math.floor(counter / 10) % 10
+  	const one   = Math.floor(counter / 1) % 10
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	return (
+		<div className="d-flex justify-content-center my-5">
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}><i className="fa-regular fa-clock"></i></div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{six}</div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{five}</div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{four}</div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{three}</div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{two}</div>
+			<div className="card d-grid place-items-center d-flex justify-content-center mx-1 bg-dark text-white align-items-center" style={{width: "12%", height: "200px", fontSize: "900%"}}>{one}</div>
 		</div>
 	);
 };
